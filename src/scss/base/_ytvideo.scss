@@ -1,0 +1,19 @@
+
+.video_yt{
+    width: 90%;
+    height: 300px;
+    margin-left: 5%;
+
+    @media(min-width: $tab){
+        width: 90%;
+        height: 400px;
+    }
+
+    @media(min-width: $tab){
+        width: 80%;
+        height: 70vh;
+        margin-left: 10%;
+    }
+    
+    
+}

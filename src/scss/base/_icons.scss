@@ -1,0 +1,67 @@
+
+.icons_cont{
+    margin-top: 64px;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 128px 128px 128px 128px 128px 128px 128px 128px;
+    row-gap: 64px;
+
+    @media (min-width: $tab){
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 128px 128px 128px 128px 128px 128px;
+    }
+
+    @media (min-width: $pc1){
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 128px 128px 128px 128px;
+    }
+}
+
+.grid_item{
+    justify-self: center;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.grid_item:last-child{
+    @media (min-width: $tab){
+        grid-column-start: 2;
+    }
+    @media (min-width: $pc1){
+        grid-column-start: auto
+    }
+}
+
+.icon{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s;
+}
+
+.icon_p{
+    position: relative;
+    visibility: hidden;
+    color: $body-background-color;
+    transition: 0.2s;
+}
+
+
+.grid_item:hover{
+    
+    background-color: white;
+
+    .icon{
+        color: $body-background-color;
+    }
+    .icon_p{
+       visibility: visible;
+       background-color: white;
+       z-index: 20;
+       text-align: justify;
+       font-weight: bolder;
+       padding: 10px;
+    }
+}
+

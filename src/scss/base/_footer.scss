@@ -1,0 +1,31 @@
+
+.footer{
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .footer_icon{
+        color: $caption-color;
+
+        &:hover{
+            color: $accent-color;
+        }
+    }
+}
+
+.footer2{
+    position: absolute;
+    bottom: 0px;
+}
+
+@supports not (-ms-ime-align: auto) {
+    .footer {
+      justify-content: space-evenly;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
